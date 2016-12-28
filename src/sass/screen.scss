@@ -1,0 +1,52 @@
+@import "compass";
+
+// Mixins
+@import "materialize/components/prefixer";
+@import "materialize/components/mixins";
+@import "materialize/components/color";
+
+$primary-color: color("grey", "darken-4");
+$secondary-color: color("grey", "darken-3");
+
+@import "materialize/components/variables";
+
+$footer-bg-color: $primary-color-dark;
+
+@import "materialize";
+
+body {
+  background-color: #000000;
+}
+
+.img-wrapper {
+  position: relative;;
+  width: auto;
+  text-align: center;
+
+  & img {
+    @include transition( 0.3s ease-in-out );
+  }
+
+  & p {
+    @include transition( 0.3s ease-in-out );
+    opacity: 0;
+    position: absolute;
+    // left: 0px;
+    //top: 55px;
+    padding: 10px;
+    border: 1px solid #FFF;
+    width: calc(100% - 40px);
+    top: calc(50% - 16px);
+    color: #FFF;
+    margin: 0px 20px;
+  }
+
+  &:hover {
+    img {
+      opacity: 0.5;
+    }
+    p {
+      opacity: 1;
+    }
+  }
+}
