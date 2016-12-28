@@ -2,7 +2,7 @@ language: go
 go:
   - 1.4
 before-install:
-  curl -L https://get.rvm.io | bash -s stable –ruby
+  - curl -L https://get.rvm.io | bash -s stable –ruby
 install:
   - go get github.com/spf13/hugo
   - gem install bundler
