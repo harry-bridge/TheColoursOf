@@ -8,6 +8,7 @@
     {{ $last := sub ( len $images ) 1 }}
     {{ range $index, $item := $images }}
       {{ if in .Name ".png" }}
+      {{ $humanName := title (index (split (index (split .Name ".") 0) "_") 1) }}
 
         {{ if eq (mod $index 2) 0 }}
           <div class="row">
@@ -17,9 +18,9 @@
               <!-- <a href="{{$url }}/{{.Name | urlize }}"> -->
 
                 <div class="img-wrapper">
-                  <img class="responsive-img hover-img" src="{{ $url }}/{{ $item.Name }}" />
+                  <img class="responsive-img hover-img" src="{{ $url }}/{{ $item.Name }}" alt="{{ $humanName }}"/>
                   <!-- <div class="valign"> -->
-                  <p class="white-text center-align">{{ title (index (split (index (split .Name ".") 0) "_") 1) }}</p>
+                  <p class="white-text center-align">{{ $humanName }}</p>
                   <!-- </div> -->
                 </div>
 
