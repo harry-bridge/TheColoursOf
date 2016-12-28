@@ -1,8 +1,7 @@
 language: go
 go:
   - 1.4
-before_install:
-  - rvm default
+sudo: false
 install:
   - go get github.com/spf13/hugo
   - gem install bundler
