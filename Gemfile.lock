@@ -46,7 +46,6 @@ GEM
     nokogiri (1.7.0)
       mini_portile2 (~> 2.1.0)
     parallel (1.10.0)
-    public_suffix (2.0.4)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
