@@ -1,9 +1,9 @@
 language: go
 go:
   - 1.4
-before-install:
+before_install:
+  - rvm default
 install:
-  - rvm get stable
   - go get github.com/spf13/hugo
   - gem install bundler
   - bundle install --without development --deployment --jobs=3 --retry=3 --binstubs
